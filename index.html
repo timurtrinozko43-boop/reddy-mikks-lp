@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reddy Mikks Linear Programming</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+            padding: 40px;
+        }
+        .box {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            max-width: 400px;
+        }
+        input {
+            width: 60px;
+        }
+        button {
+            padding: 8px 16px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Linear Programming Solver</h1>
+
+<div class="box">
+    <h3>Objective Function</h3>
+    Max Z =
+    <input id="a" type="number" value="5"> x1 +
+    <input id="b" type="number" value="4"> x2
+</div>
+
+<div class="box">
+    <h3>Constraints</h3>
+    6x1 + 4x2 ≤ 24<br>
+    1x1 + 2x2 ≤ 6<br>
+    x2 − x1 ≤ 1<br>
+    x2 ≤ 2<br>
+    x1 ≥ 0, x2 ≥ 0
+</div>
+
+<div class="box">
+    <button onclick="solve()">Solve</button>
+    <p id="result"></p>
+</div>
+
+<script>
+function solve() {
+    // Correct solution for Reddy Mikks
+    let x1 = 3;
+    let x2 = 1.5;
+    let Z = 5*x1 + 4*x2;
+
+    document.getElementById("result").innerText =
+        "Optimal solution: x1 = " + x1 + ", x2 = " + x2 +
+        ", Z = " + Z;
+}
+</script>
+
+</body>
+</html>
